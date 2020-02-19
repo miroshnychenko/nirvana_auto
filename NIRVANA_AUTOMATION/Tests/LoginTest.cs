@@ -45,7 +45,7 @@ namespace NIRVANA_AUTOMATION
                 //Click on Login button
                 HeaderBlock.ClickLoginButton();
                 //Login with credential (see method in LoginBlock.cs)
-                LoginBlock.DoLogin("SBTest8v3dot9", "Sb123456");
+                LoginBlock.DoLogin("", "");
                 //Check if Inbox button is present. Would be good to have more cheks, this is just first element found in Locators (Balance element, Deposit button, etc.)
                 Assert.True(Locators.InboxButtonInHeader.Displayed);
             }
@@ -56,7 +56,7 @@ namespace NIRVANA_AUTOMATION
                 //Click on Login button
                 HeaderBlock.ClickLoginButton();
                 //Login with credential (see method in LoginBlock.cs)
-                LoginBlock.DoLogin("qqwwee332211", "12345678");
+                LoginBlock.DoLogin("", "");
                 Assert.True(Locators.LoginError.Displayed);
                 Assert.AreEqual("Username and Password do not match", Locators.LoginError.Text);
             }
