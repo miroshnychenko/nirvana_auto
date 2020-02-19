@@ -1,0 +1,113 @@
+﻿using OpenQA.Selenium;
+using System.Collections.Generic;
+namespace NIRVANA_AUTOMATION.src
+{ 
+    public class Locators
+    {
+        private IWebDriver Driver;
+
+        public Locators(IWebDriver driver)
+        {
+            Driver = driver;
+        }
+        public IWebElement Promotions => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-text' and contains (text(),'Promotions')]"));
+        public IWebElement Logo => Driver.FindElement(By.XPath("//*[@data-uat='header-logo']"));
+        public IWebElement HighlightsTab => Driver.FindElement(By.XPath("//*[@data-params='responsive-home, Center_TabSwitchResponsiveBlock_15979, selectChild, 2']"));
+        public IList<IWebElement> LiveEvents => Driver.FindElements(By.XPath("//*[@data-uat='a-ev-list-ev-card-event-info']"));
+        public IList<IWebElement> MarketsInEvents => Driver.FindElements(By.XPath("//*[@data-uat='toggleable-headline']"));
+        public IList<IWebElement> PreLiveEvents => Driver.FindElements(By.XPath("//*[@data-uat='event-details']"));
+        public IWebElement SportsButtonInHeader => Driver.FindElement(By.XPath("//*[@id='nav-item-hr-mid-Top_ResponsiveHeader_16020-page-header-left20']/a"));
+        public IWebElement SportsBlock => Driver.FindElement(By.Id("master-container-Center_LiveSummaryResponsiveBlock_17411"));
+        public IWebElement LiveBettingButtonInHeader => Driver.FindElement(By.XPath("//*[@id='nav-item-hr-mid-Top_ResponsiveHeader_16020-page-header-left21']/a"));
+        public IWebElement LiveBettingBlock => Driver.FindElement(By.XPath("//*[@data-uat='events-container-live']"));
+        public IWebElement CasinoButtonInHeader => Driver.FindElement(By.XPath("//*[@id='nav-item-hr-mid-Top_ResponsiveHeader_16020-page-header-left22']/a"));
+        public IWebElement CasinoBlock => Driver.FindElement(By.Id("html-container-Center_CasinoGridWidget_19666"));
+        public IWebElement LiveCasinoButtonInHeader => Driver.FindElement(By.XPath("//*[@id='nav-item-hr-mid-Top_ResponsiveHeader_16020-page-header-left23']/a"));
+        public IWebElement LiveCasinoBlock => Driver.FindElement(By.ClassName("sb-src-components-sbtech-cas-widget-grid-_index__grid-title"));
+        public IList<IWebElement> DepositButtonInHeader => Driver.FindElements(By.XPath("//*[@class='page-header-custom-link-text' and contains(text(), 'Deposit')]"));
+        public IWebElement BalanceDdBlock => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IList<IWebElement> BalanceDdInHeader => Driver.FindElements(By.XPath("//*[@data-uat='page-header-dropdown-item']"));
+        public IWebElement MyBetsDdInHeader => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-emphasis' and contains(text(), 'My Bets')]"));
+        public IWebElement MyBetsDdBlock => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement InboxButtonInHeader => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-emphasis' and contains(text(), 'Inbox')]"));
+        public IWebElement InboxBlock => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement MyAccMenuDD => Driver.FindElement(By.XPath(@"//*[@class='page-header-dropdown-text' and contains (text(),'Bets ID')]"));
+        public IWebElement BalanceButtonFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Balance')]"));
+        public IWebElement BalancePopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement CancelWithdrawButtonFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Cancel Withdrawal')]"));
+        public IWebElement CancelWithdrawPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement OpenBetsFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Open Bets')]"));
+        public IWebElement OpenBetsPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement BettingHistoryFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Betting History')]"));
+        public IWebElement BettingHistoryPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement GamesHistoryFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Games History')]"));
+        public IWebElement GamesHistoryPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement TransactionHistoryFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Transaction History')]"));
+        public IWebElement TransactionHistoryPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement BonusInformationFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Bonus Information')]"));
+        public IWebElement BonusInformationPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement PersonalDetailsFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Personal Details')]"));
+        public IWebElement PersonalDetailsPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement ResponsibleGamingFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Responsible Gaming')]"));
+        public IWebElement ResponsibleGamingPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement DocumentsUploadFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Documents Upload')]"));
+        public IWebElement DocumentsUploadPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IWebElement LimitationsFromMyAcc => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains(text(), 'Limitations')]"));
+        public IWebElement LimitationsPopUp => Driver.FindElement(By.XPath("//*[@data-uat='my-account-content-wrap']"));
+        public IList<IWebElement> ExactScoreSelection => Driver.FindElements(By.XPath("//*[@id='event_container_70251233_']/div[@class='event-buttons-container ']/div/div[@class='bet-button-wrap counted']"));
+        public IWebElement Stake => Driver.FindElement(By.XPath("//*[@class='stakeboxActionsBtn stakeboxActionsPlus']"));
+        public IWebElement PlaceBetButton => Driver.FindElement(By.XPath("//*[@data-uat='place-bet-button']"));
+        public IWebElement AcceptedBet => Driver.FindElement(By.XPath("//*[@data-uat='bet-purchase-state' and contains(text(), 'Bet accepted:')]"));
+        public IList<IWebElement> HandicapSelection => Driver.FindElements(By.XPath("//*[@id='event_container_70251246_']/div[@class='event-buttons-container ']/div/div[@class='bet-button-wrap counted']"));
+        public IWebElement FootballBranch => Driver.FindElement(By.Id("Left_SportsListResponsiveBlock_16152_1"));
+        public IList<IWebElement> EnglandFootballBranch => Driver.FindElements(By.XPath("//*[@data-uat='sports-list-sub-item']"));
+        public IList<IWebElement> PremierLeague => Driver.FindElements(By.XPath("//*[@data-uat='sports-list-sub-item']"));
+        public IList<IWebElement> OutrightButton => Driver.FindElements(By.XPath("//*[@data-uat='tab-switch-btn']"));
+        public IList<IWebElement> Team => Driver.FindElements(By.XPath("//*[@data-uat='button-ev-list-bet-btn']"));
+        public IList<IWebElement> OverUnderSelection => Driver.FindElements(By.XPath("//*[@id='event_container_42350888_0']/div[@class='event-buttons-container ']/div/div[@class='bet-button-wrap counted']"));
+        public IList<IWebElement> LiveEventSelection => Driver.FindElements(By.XPath("//*[@data-uat='events-container-live']//div[@data-uat='div-ev-list-content']//button[@data-uat='button-ev-list-bet-btn']"));
+        public IList<IWebElement> PreLiveEventSelection => Driver.FindElements(By.XPath("//*[@data-uat='event-wrapper-inner']/div[@data-uat='event-odds']/div/div[@class='bet-button-wrap counted']"));
+        public IWebElement JoinNowButton => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-text' and contains(text(), 'Join now')]"));
+        public IWebElement FirstNameReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-firstname']"));
+        public IWebElement LastNameReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-lastname']"));
+        public IWebElement EmailReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-email']"));
+        public IWebElement BirthDayDDReg => Driver.FindElement(By.Id("filter_value_Center_StepwiseRegistrationBlock_17649-stepwise-registration-birthday-input"));
+        public IWebElement FirstDayDDReg => Driver.FindElement(By.XPath("//*[@id='scrollable_Center_StepwiseRegistrationBlock_17649-stepwise-registration-birthday-input']/div[1]/span[1]"));
+        public IWebElement BirthMonthDDReg => Driver.FindElement(By.XPath("//*[@id='filter_value_Center_StepwiseRegistrationBlock_17649-stepwise-registration-birthmonth-input']"));
+        public IWebElement FirstMonthDDReg => Driver.FindElement(By.XPath("//*[@id='scrollable_Center_StepwiseRegistrationBlock_17649-stepwise-registration-birthmonth-input']/div[1]/span[1]"));
+        public IWebElement BirthYearDDReg => Driver.FindElement(By.XPath("//*[@id='filter_value_Center_StepwiseRegistrationBlock_17649-stepwise-registration-birthyear-input']"));
+        public IWebElement FirstYearDDReg => Driver.FindElement(By.XPath("//*[@id='scrollable_Center_StepwiseRegistrationBlock_17649-stepwise-registration-birthyear-input']/div[1]/span[5]"));
+        public IWebElement NextButtonReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-next-button']"));
+        public IWebElement MobileNumberReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-mobile-number-input']"));
+        public IWebElement AddressReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-address']"));
+        public IWebElement CityReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-city']"));
+        public IWebElement PostCodeReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-postcode']"));
+        public IWebElement SubmitButtonReg => Driver.FindElement(By.Id("Center_StepwiseRegistrationBlock_17649-stepwise-registration-next-button2"));
+        public IWebElement UsernameReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-username']"));
+        public IWebElement PasswordReg => Driver.FindElement(By.XPath("//*[@data-uat='registration-password']"));
+        public IWebElement ConfirmPasswordReg => Driver.FindElement(By.Id("Center_StepwiseRegistrationBlock_17649-stepwise-registration-confirmpassword-input"));
+        public IWebElement AmountDDReg => Driver.FindElement(By.XPath("//*[@id='filter_value_Center_StepwiseRegistrationBlock_17649-stepwise-registration-depositstake-input']"));
+        public IWebElement NoLimit => Driver.FindElement(By.XPath("//*[@id='scrollable_Center_StepwiseRegistrationBlock_17649-stepwise-registration-depositstake-input']/div[1]/span[1]"));
+        public IWebElement Breadcrumbs => Driver.FindElement(By.XPath("//*[@data-uat='breadcrumb-text']"));
+        public IWebElement ResultSubHeader => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-text' and contains (text(),'Results')]"));
+        public IWebElement PriceBoostsSubHeader => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-text' and contains (text(),'Price Boosts')]"));
+        public IWebElement PromotionsSubHeader => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-text' and contains (text(),'Promotions')]"));
+        public IWebElement ContactUsSubHeader => Driver.FindElement(By.XPath("//*[@class='page-header-custom-link-text' and contains (text(),'Contact Us')]"));
+        public IWebElement ContactUsBreadcrumbs => Driver.FindElement(By.XPath("//*[@data-uat='breadcrumb-text' and contains (text(), 'Contact Us')]"));
+        public IWebElement OddDDSubHeader => Driver.FindElement(By.XPath("//*[@data-uat='dropdown-odds']"));
+        public IWebElement TimeZoneDDSubHeader => Driver.FindElement(By.XPath("//*[@data-uat='dropdown-timezone']"));
+        public IWebElement DateSubHeader => Driver.FindElement(By.XPath("//*[@class='page-header-link page-header-current-date-text']"));
+        public IWebElement TodaysEventsSubHeader => Driver.FindElement(By.XPath("//*[@id='hr-bot-Top_ResponsiveHeader_16020-page-header-left1']/a/span"));
+        public IWebElement HiLink => Driver.FindElement(By.XPath("//*[@class='page-header-dropdown-text' and contains (text(), 'Bets ID')]"));
+        public IWebElement LogoutButton => Driver.FindElement(By.XPath(@"//*[@class='page-header-custom-link-text' and contains (text(),'Logout')]"));
+        public IWebElement LoginButton => Driver.FindElement(By.XPath("//*[@title='Login']"));
+        public IWebElement Username => Driver.FindElement(By.XPath("//*[@data-uat='login-username-input']"));
+        public IWebElement Password => Driver.FindElement(By.XPath("//*[@data-uat='login-password-input']"));
+        public IWebElement LoginButtonSubmit => Driver.FindElement(By.XPath("//*[@data-uat='personal-information-button']"));
+        public IWebElement RealityCheckPopUp => Driver.FindElement(By.ClassName("c-reality-check__btn"));
+        public IList<IWebElement> TandTCheckBox => Driver.FindElements(By.XPath("///*[@class='stepwise-registration__checkbox']"));
+        public IWebElement AccessDeniedPopup => Driver.FindElement(By.ClassName("rj-popup-message"));
+        public IWebElement AccessDeniedPopupText => Driver.FindElement(By.ClassName("rj-popup-message__body-html"));
+        public IWebElement LoginError => Driver.FindElement(By.ClassName("user-info__error"));
+    }
+}
